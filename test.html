@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/style.scss">
+  </head>
+<body>
+    
+  <main role="main">
+
+    <!-- Slider -->
+    <section class="velo-slides" data-velo-slider="on" data-velo-theme="light">
+    
+  
+      <!-- Slide -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>Check Them Bldgs</span></span></span> <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
+          <figure class="velo-slide__figure" style="background-image: url(https://source.unsplash.com/VsBl5PwVZpY/2000x1200)"></figure>
+        </div>
+      
+        <!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>The Name Is</span></span><span class="oh"><span>Stephen Scaff</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>I'm a Creative Developer currently building web things at the Seattle Branding + Interactive firm, Urban Influence.</span></span></p>
+          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="#"><span class="btn-draw__text"><span>View Work</span></span></a></span>
+        </header>
+      </section>
+  
+      <!-- Slide -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>What's up Playas</span></span></span> 
+        <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
+          <figure class="velo-slide__figure" style="background-image: url(https://source.unsplash.com/D8GFCYxyJj8/2000x1200)"></figure>
+        </div>
+      
+        <!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>Another Day</span></span><span class="oh"><span>Another Slide</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>The here slider interaction thing is using Velocity for ehanced animation performance.</span></span></p>
+        </header>
+      </section>
+      
+      <!-- Slide - with Video -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>Urban Influence</span></span></span> 
+        <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
+          <figure class="velo-slide__figure" style="background-image: url()"></figure>
+          <div class="velo-slide__vid-wrap">
+            <video autoplay="" class="velo-slide__vid" loop="" poster="">
+              <source src="http://uiclients.com/assets/videos/ui-chaun.mp4" type="video/mp4"> Wait, are you still using IE? Bruv. Go get Chrome, or kick rocks.</video>
+          </div>
+        </div><!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>Pigeon Wisdom</span></span><span class="oh"><span>Agency Site</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>Live from the Coop, SOTD rocking, folio and storytelling joint for the Pigeon Wizzy squad. Coo Coo Mfers.</span></span></p>
+          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="#"><span class="btn-draw__text"><span>View Project</span></span></a></span>
+        </header>
+      </section>
+      
+     
+      <!-- Slides Nav -->
+      <nav class="velo-slides-nav">
+        <ul class="velo-slides-nav__list">
+          <li>
+            <a class="js-velo-slides-prev velo-slides-nav__prev inactive" href="#0"><i class="icon-up-arrow"></i></a>
+          </li>
+          <li>
+            <a class="js-velo-slides-next velo-slides-nav__next" href="#0"><i class="icon-down-arrow"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+
+  <script>
+    /**
+ * Velocity Effects
+ *
+ * First, A few Registered effects for velocity's ui kit.
+ * Actual slider stuff below
+ */
+
+var scaleDownAmnt = 0.7;
+var boxShadowAmnt = '40px';
+
+$.Velocity.RegisterEffect("translateUp", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '-100%'
+    }, 1]
+  ]
+});
+$.Velocity.RegisterEffect("translateDown", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '100%'
+    }, 1]
+  ]
+});
+$.Velocity.RegisterEffect("translateNone", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '0',
+      opacity: '1',
+      scale: '1',
+ 
+    }, 1]
+  ]
+});
+//scale down
+$.Velocity.RegisterEffect("scaleDown", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      opacity: '0',
+      scale: '0.7',
+ 
+    }, 1]
+  ]
+});
+
+//gallery
+$.Velocity.RegisterEffect("scaleDown.moveUp", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '0%',
+      scale: scaleDownAmnt,
+ 
+    }, 0.20],
+    [{
+      translateY: '-100%'
+    }, 0.60],
+    [{
+      translateY: '-100%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.20]
+  ]
+});
+$.Velocity.RegisterEffect("scaleDown.moveUp.scroll", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '-100%',
+      scale: scaleDownAmnt,
+ 
+    }, 0.60],
+    [{
+      translateY: '-100%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.40]
+  ]
+});
+$.Velocity.RegisterEffect("scaleUp.moveUp", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '90%',
+      scale: scaleDownAmnt,
+      // boxShadowBlur: boxShadowAmnt     
+    }, 0.20],
+    [{
+      translateY: '0%'
+    }, 0.60],
+    [{
+      translateY: '0%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.20]
+  ]
+});
+$.Velocity.RegisterEffect("scaleUp.moveUp.scroll", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '0%',
+      scale: scaleDownAmnt,
+      // boxShadowBlur: boxShadowAmnt
+    }, 0.60],
+    [{
+      translateY: '0%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.40]
+  ]
+});
+$.Velocity.RegisterEffect("scaleDown.moveDown", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '0%',
+      scale: scaleDownAmnt,
+      // boxShadowBlur: boxShadowAmnt
+    }, 0.20],
+    [{
+      translateY: '100%'
+    }, 0.60],
+    [{
+      translateY: '100%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.20]
+  ]
+});
+$.Velocity.RegisterEffect("scaleDown.moveDown.scroll", {
+  defaultDuration: 1,
+  calls: [
+    [{
+
+    }, 0.60],
+    [{
+      translateY: '100%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.40]
+  ]
+});
+$.Velocity.RegisterEffect("scaleUp.moveDown", {
+  defaultDuration: 1,
+  calls: [
+    [{
+      translateY: '-90%',
+      scale: scaleDownAmnt,
+      // boxShadowBlur: boxShadowAmnt
+    }, 0.20],
+    [{
+      translateY: '0%'
+    }, 0.60],
+    [{
+      translateY: '0%',
+      scale: '1',
+      // boxShadowBlur: '0'
+    }, 0.20]
+  ]
+});
+
+
+
+/**
+ * Velo Slider
+ * A Custom Slider using Velocity and Velocity UI effects
+ */
+
+var VeloSlider = (function() {
+
+  /**
+   * Global Settings 
+   */
+  var settings = {
+    veloInit: $('.velo-slides').data('velo-slider'),
+    $veloSlide: $('.velo-slide'),
+    veloSlideBg: '.velo-slide__bg',
+    navPrev:  $('.velo-slides-nav').find('a.js-velo-slides-prev'),
+    navNext:  $('.velo-slides-nav').find('a.js-velo-slides-next'),
+    veloBtn:   $('.velo-slide__btn'),
+    delta: 0,
+    scrollThreshold: 7,
+    currentSlide: 1,
+    animating: false,
+    animationDuration: 2000
+  };
+
+
+  // Flags
+  var delta = 0,
+      animating = false;
+
+  return {
+   
+      /**
+       * Init 
+       */
+      init: function() {
+        this.bind();
+      },
+    
+    /**
+     * Bind our click, scroll, key events
+     */
+    bind: function(){
+ 
+      //  Add active to first slide to set it off
+      settings.$veloSlide.first().addClass('is-active');
+
+      //  Init with a data attribute, 
+      //  Binding the animation to scroll, arrows, keys
+      if (settings.veloInit == 'on') {
+        VeloSlider.initScrollJack();
+        $(window).on('DOMMouseScroll mousewheel', VeloSlider.scrollJacking);
+      }
+
+      // Arrow / Click Nav
+      settings.navPrev.on('click', VeloSlider.prevSlide);
+      settings.navNext.on('click', VeloSlider.nextSlide);
+    
+      // Key Nav
+      $(document).on('keydown', function(e) {
+        var keyNext = (e.which == 39 || e.which == 40),
+            keyPrev = (e.which == 37 || e.which == 38);
+
+        if (keyNext && !settings.navNext.hasClass('inactive')) {
+          e.preventDefault();
+          VeloSlider.nextSlide();
+
+        } else if (keyPrev && (!settings.navPrev.hasClass('inactive'))) {
+          e.preventDefault();
+          VeloSlider.prevSlide();
+        }
+      });
+      
+      // // Swipes
+      // $(window).swipe(function( direction, offset ) {
+      //   //if (offset < 100) { return; }
+      //   if (direction == "up") { 
+      //     VeloSlider.prevSlide(); 
+      //     console.log('swipe up');
+
+      //   }
+      //   if (direction == "down") { VeloSlider.nextSlide(); } 
+      // });
+    
+      //set navigation arrows visibility
+      VeloSlider.checkNavigation();
+
+      // Call Button Hover animation
+      VeloSlider.hoverAnimation();
+     
+    },
+
+    /**
+     * Hover Animation
+     * Adds 'is-hovering' class to the current slide
+     * when hovering over the button.
+     */
+    hoverAnimation: function(){
+      settings.veloBtn.hover(function (){
+        $(this).closest(settings.$veloSlide).toggleClass('is-hovering');
+      });
+    },
+
+    /** 
+     * Set Animation
+     * Defines the animation sequence, calling our registered velocity effects
+     * @see js/components/_velocity-effects.js
+     */
+    setAnimation: function(midStep, direction) {
+      
+      // Vars for our velocity effects
+      var animationVisible = 'translateNone',
+          animationTop = 'translateUp',
+          animationBottom = 'translateDown',
+          easing = 'ease',
+          animDuration = settings.animationDuration;
+
+      // Middle Step
+      if (midStep) {
+        animationVisible = 'scaleUp.moveUp.scroll';
+        animationTop = 'scaleDown.moveUp.scroll';
+        animationBottom = 'scaleDown.moveDown.scroll';
+      
+      } else {
+        animationVisible = (direction == 'next') ? 'scaleUp.moveUp' : 'scaleUp.moveDown';
+        animationTop = 'scaleDown.moveUp';
+        animationBottom = 'scaleDown.moveDown';
+      }
+
+      return [animationVisible, animationTop, animationBottom, animDuration, easing];
+    },
+
+    /** 
+     * Init Scroll Jaclk
+     */
+    initScrollJack: function() {
+
+      var visibleSlide = settings.$veloSlide.filter('.is-active'),
+          topSection = visibleSlide.prevAll(settings.$veloSlide),
+          bottomSection = visibleSlide.nextAll(settings.$veloSlide),
+          animationParams = VeloSlider.setAnimation(false),
+          animationVisible = animationParams[0],
+          animationTop = animationParams[1],
+          animationBottom = animationParams[2];
+          console.log(animationParams);
+          console.log(animationParams[4]);
+
+      visibleSlide.children('div').velocity(animationVisible, 1, function() {
+        visibleSlide.css('opacity', 1);
+        topSection.css('opacity', 1);
+        bottomSection.css('opacity', 1);
+      });
+
+      topSection.children('div').velocity(animationTop, 0);
+      bottomSection.children('div').velocity(animationBottom, 0);
+    },
+
+    /**
+     * Scroll Jack
+     * On Mouse Scroll
+     */
+    scrollJacking: function(e) {
+      if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+        delta--;
+        (Math.abs(delta) >= settings.scrollThreshold) && VeloSlider.prevSlide();
+      } else {
+        delta++;
+        (delta >= settings.scrollThreshold) && VeloSlider.nextSlide();
+      }
+      return false;
+    },
+
+    /**
+     * Previous Slide
+     */
+    prevSlide: function(e) {
+      //go to previous section
+      typeof e !== 'undefined' && e.preventDefault();
+      
+      var visibleSlide = settings.$veloSlide.filter('.is-active'),
+          animationParams = VeloSlider.setAnimation(midStep, 'prev'),
+          midStep = false;
+      
+      visibleSlide = midStep ? visibleSlide.next(settings.$veloSlide) : visibleSlide;
+
+      console.log(midStep);
+
+      if (!animating && !visibleSlide.is(":first-child")) {
+        animating = true;
+        
+        visibleSlide
+          .removeClass('is-active')
+          .children(settings.veloSlideBg)
+          .velocity(animationParams[2], animationParams[3], animationParams[4])
+          .end()
+          .prev(settings.$veloSlide)
+          .addClass('is-active')
+          .children(settings.veloSlideBg)
+          .velocity(animationParams[0], animationParams[3], animationParams[4], function() {
+            animating = false;
+          });
+        currentSlide = settings.currentSlide - 1;
+      }
+      VeloSlider.resetScroll();
+    },
+
+
+    /** 
+     * Next Slide
+     */
+    nextSlide: function(e) {
+      
+      //go to next section
+      typeof e !== 'undefined' && e.preventDefault();
+      
+      var visibleSlide = settings.$veloSlide.filter('.is-active'),
+          animationParams = VeloSlider.setAnimation(midStep, 'next'),
+          midStep = false;
+
+      if (!animating && !visibleSlide.is(":last-of-type")) {
+        animating = true;
+
+        visibleSlide.removeClass('is-active')
+          .children(settings.veloSlideBg)
+          .velocity(animationParams[1], animationParams[3])
+          .end()
+          .next(settings.$veloSlide)
+          .addClass('is-active')
+          .children(settings.veloSlideBg)
+          .velocity(animationParams[0], animationParams[3], function() {
+            animating = false;
+        });
+        currentSlide = settings.currentSlide + 1;
+      }
+      VeloSlider.resetScroll();
+    },
+
+    /**
+     * Reset SCroll
+     */
+    resetScroll: function() {
+      delta = 0;
+      VeloSlider.checkNavigation();
+    },
+
+    /**
+     * Check Nav
+     * Adds / hides nav based on first/last slide
+     * @todo - loop slides, without cloning if possible
+     */
+    checkNavigation: function() {
+      //update navigation arrows visibility
+      (settings.$veloSlide.filter('.is-active').is(':first-of-type')) ? settings.navPrev.addClass('inactive'): settings.navPrev.removeClass('inactive');
+      (settings.$veloSlide.filter('.is-active').is(':last-of-type')) ? settings.navNext.addClass('inactive'): settings.navNext.removeClass('inactive');
+
+    },
+  };
+})();
+
+// INIT
+VeloSlider.init();
+  
+  </script>
+</body>
+</html>
