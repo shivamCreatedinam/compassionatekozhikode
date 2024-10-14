@@ -6,16 +6,8 @@
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 62.5%;
-}
-@media only screen and (max-width: 800px) {
-  html {
-    font-size: 57%;
-  }
-}
+
+
 
 body {
   background-color: #000;
@@ -42,7 +34,7 @@ body {
 .slider {
   display: flex;
   width: 500%;
-  height: 65rem;
+  height: 42rem;
   transition: all 0.25s ease-in;
   transform: translateX(0);
 }
@@ -131,14 +123,14 @@ body {
   }
 }
 .slider .box .details h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #fff;
 }
 .slider .box .details p {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #B5B4B4;
   margin-bottom: 2rem;
   margin-right: 5rem;
