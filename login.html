@@ -66,7 +66,7 @@
 
 
           <div class="site-logo">
-            <a href="#" class="text-white">Compassion atekozhikode</a>
+            <a href="#" class="text-white"><img src="/images/logo.png" alt="" style="width: 100px">Compassion atekozhikode</a>
           </div>
 
 
@@ -76,13 +76,24 @@
               <li><a href="#" class="nav-link">About Us</a></li>
               <li><a href="#" class="nav-link">Our Causes</a></li>
               <li><a href="#" class="nav-link">Blog</a></li>
-              <li><a href="#" class="nav-link">Contact</a></li>
-              <li><a href="/login.html"><i class="fa-solid fa-user user">
-                <div class="dropdown">
-                    <p>Surf as a Guest</p>
-                    <p>Sign Up / Log In</p>
-                </div>
-              </i></a></li>
+              <li><a href="#" class="nav-link forMob" >Contact</a></li>
+
+              <li id="userIconContainer">
+                <a href="#" class="nav-link">
+                  <div class="navbar-guest">
+                    <i class="fa-solid fa-user user-icon" id="userIcon"></i>
+                    <span id="guestName" style="margin-left: 10px;"></span>
+                  </div>
+                  <div class="dropdown" id="userDropdown">
+                    <p id="surfGuest">Surf as a Guest</p>
+                    <a href="/login.html">Sign Up / Log In</a>
+                  </div>
+                </a>
+              </li>
+              
+              
+              
+              
             </ul>
           </nav>
 
@@ -167,14 +178,29 @@
     <h2 class="animation" style="--li:17">Welcome Back !</h2>
     <p class="animation" style="--li:18">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusamus.</p>
 </div>
-
-
-
-
 </div>
 
 
 
+
+   <!-- Guest Mode Popup -->
+   <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-form">
+      <h3>Enter Guest Details</h3>
+      <form id="guestForm">
+        <div class="form-group">
+          <label for="guestNameInput">Name</label>
+          <input type="text" class="form-control" id="guestNameInput" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="guestImageInput">Profile Picture</label>
+          <input type="file" class="form-control" id="guestImageInput" accept="image/*" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+    </div>
+  </div>
+  
 
 
 
@@ -277,6 +303,56 @@
 
 
 </script>
+
+<script>
+   // Get elements
+const surfGuest = document.getElementById('surfGuest');
+const openPopup = document.querySelectorAll('.forMob');
+const popupOverlay = document.getElementById('popupOverlay');
+const guestForm = document.getElementById('guestForm');
+const userIcon = document.getElementById('userIcon');
+const guestNameDisplay = document.getElementById('guestName');
+
+// Open popup when "Surf as a Guest" is clicked
+surfGuest.addEventListener('click', () => {
+  popupOverlay.style.display = 'flex';
+});
+
+openPopup.forEach((element) => {
+  element.addEventListener('click', () => {
+    // popupOverlay.style.display = 'flex';
+    alert('clicked');
+  });
+});
+
+// Handle guest form submission
+guestForm.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent page reload
+
+  const name = document.getElementById('guestNameInput').value;
+  const imageInput = document.getElementById('guestImageInput').files[0];
+
+  if (imageInput) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      // Replace the user icon with the uploaded image
+      userIcon.outerHTML = `<img src="${event.target.result}" alt="Guest" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">`;
+
+      // Display the guest name
+      guestNameDisplay.textContent = name;
+
+      // Close the popup
+      popupOverlay.style.display = 'none';
+    };
+    reader.readAsDataURL(imageInput);
+  }
+});
+
+
+
+</script>
+
+
 
 </body>
 
