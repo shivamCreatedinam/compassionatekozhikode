@@ -160,14 +160,14 @@ body {
 }
 .slider .box1 {
   /* background-color: #500033; */
-  background-image: url(/images/banner_1.JPG);
+  background-image: url('../images/banner_1.JPG');
   background-size: cover;
 
 }
 .slider .box1 .illustration .inner {
   background-color: white;
 
-  background-image: url(/images/book.gif);
+  background-image: url('../images/book.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -178,13 +178,13 @@ body {
   background-color: #21323B;
 }
 .slider .box2 {
-  background-image: url(/images/banner_2.JPG);
+  background-image: url('../images/banner_2.JPG');
   background-size: cover;
 
 }
 .slider .box2 .illustration .inner {
   background-color: white;
-  background-image: url(/images/read.gif);
+  background-image: url('../images/read.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -195,13 +195,13 @@ body {
   background-color: #21323B;
 }
 .slider .box3 {
-  background-image: url(/images/banner_3.JPG);
+  background-image: url('../images/banner_3.JPG');
   background-size: cover;
 
 }
 .slider .box3 .illustration .inner {
   background-color: white;
-  background-image: url(/images/play.gif);
+  background-image: url('../images/play.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -212,13 +212,13 @@ body {
   background-color: #21323B;
 }
 .slider .box4 {
-  background-image: url(/images/banner_4.JPG);
+  background-image: url('../images/banner_4.JPG');
   background-size: cover;
 
 }
 .slider .box4 .illustration .inner {
   background-color: white;
-  background-image: url(/images/study.gif);
+  background-image: url('../images/study.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -229,12 +229,12 @@ body {
   background-color: #21323B;
 }
 .slider .box5 {
-  background-image: url(/images/banner_5.JPG);
+  background-image: url('../images/banner_5.JPG');
   background-size: cover;
 }
 .slider .box5 .illustration .inner {
   background-color: white;
-  background-image: url(/images/playing.gif);
+  background-image: url('../images/playing.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
