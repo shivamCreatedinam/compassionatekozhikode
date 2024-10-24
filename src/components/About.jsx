@@ -5,6 +5,15 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from '../images/about_us_1.jpeg'
 import img2 from '../images/about_us_2.jpeg'
 import img3 from '../images/about_us_3.jpeg'
+import physical from '../images/physical.JPG'
+import skill from '../images/skill.JPG'
+import yoga from '../images/yoga.JPG'
+import creative from '../images/creative.JPG'
+
+
+
+
+
 
 const SLIDES = [
   { src: img1, alt: 'Image 1' },
@@ -60,7 +69,6 @@ const NextArrow = ({ className, style, onClick }) => (
 );
 
 
-
 export const About = () => {
 
   const settings = {
@@ -110,27 +118,27 @@ export const About = () => {
 
         <div className="focus_areas">
           <div className="area">
-            <img src={img1} alt="" className='focus_img' />
-            <h3>Yoga and Meditation:</h3>
+            <img src={yoga} alt="" className='focus_img'  style={{objectFit: 'cover'}}/>
+            <h3>Yoga and Meditation</h3>
             <p>Designed to foster mental clarity and emotional balance, helping the children cope with their past experiences and build resilience for the future.</p>
           </div>
           <div className="area">
-            <img src={img1} alt="" className='focus_img' />
+            <img src={physical} alt="" className='focus_img' style={{objectFit: 'cover'}}/>
             <h3>Physical Education</h3>
             <p>A vital component in ensuring the physical well-being and discipline of the children, promoting a healthy lifestyle.</p>
           </div>
           <div className="area">
-            <img src={img1} alt="" className='focus_img' />
+            <img src={skill} alt="" className='focus_img' style={{objectFit: 'cover'}}/>
             <h3>Skill Development</h3>
             <p>Computer training and other vocational courses aim to equip the children with practical skills that will serve them well in their personal and professional lives.</p>
           </div>
           <div className="area">
-            <img src={img1} alt="" className='focus_img' />
+            <img src={creative} alt="" className='focus_img' style={{objectFit: 'cover'}}/>
             <h3>Creative Expression</h3>
             <p>Dance and music lessons provide a creative outlet, allowing children to express themselves and build confidence through the arts.</p>
           </div>
           <div className="area">
-            <img src={img1} alt="" className='focus_img' />
+            <img src={img1} alt="" className='focus_img' style={{objectFit: 'cover'}}/>
             <h3>Academic Growth</h3>
             <p>In partnership with prestigious public schools in the district, children receive quality education, with additional support provided through home tutoring to ensure no child is left behind.</p>
           </div>

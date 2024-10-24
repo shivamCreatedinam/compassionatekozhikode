@@ -17,6 +17,25 @@ export const Header = () => {
     setShowSidebar(!showSidebar);
   };
 
+
+  const [userName, setUserName] = useState("");
+  const [userImage, setUserImage] = useState(null);
+
+  const handleNameChange = (e) => {
+    setUserName(e.target.value);
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setUserImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div>
       <header className="site-navbar site-navbar-target bg-secondary shadow" role="banner">
@@ -48,7 +67,12 @@ export const Header = () => {
                 </li>
                 <li className="user-dropdown">
                   <Link to='#' className="nav-link">
-                    <i className="fa-solid fa-user user"></i>
+                    {userImage ? (
+                      <img src={userImage} alt="User Profile" className="user-picture" />
+                    ) : (
+                      <i className="fa-solid fa-user user fa-xl"></i>
+                    )}
+                    {userName && <span>{userName}</span>}
                   </Link>
                   <div className="dropdown">
                     <p onClick={toggleOverlay}>Surf as a Guest</p>
@@ -58,22 +82,18 @@ export const Header = () => {
               </ul>
             </nav>
 
-            {/* <div className="user-dropdown">
-                  <Link to='#' className="nav-link">
-                    <i className="fa-solid fa-user user"></i>
-                  </Link>
-                  <div className="dropdown">
-                    <p onClick={toggleOverlay}>Surf as a Guest</p>
-                    <Link to="/login">Sign Up / Log In</Link>
-                  </div>
-                </div>
-                 */}
+
             <div className="ml-auto toggle-button d-inline-block d-lg-none">
-            
+
               <a href="#" className="site-menu-toggle py-5 js-menu-toggle text-white" >
                 <div className="user-dropdown mobile_dropdown">
                   <Link to='#' className="nav-link">
-                    <i className="fa-solid fa-user user fa-xl"></i>
+                  {userImage ? (
+                      <img src={userImage} alt="User Profile" className="user-picture" />
+                    ) : (
+                      <i className="fa-solid fa-user user fa-xl"></i>
+                    )}
+                    {userName && <span>{userName}</span>}
                   </Link>
                   <div className="dropdown">
                     <p onClick={toggleOverlay}>Surf as a Guest</p>
@@ -109,24 +129,41 @@ export const Header = () => {
       {/* Overlay for Guest */}
       {showOverlay && (
         <div className="popup-overlay" id="popupOverlay">
-          <div className="popup-form">
-            <div className='form_top'>
-              <h3>Enter Guest Details</h3>
-              <i className="fa-solid fa-x fa-xl" onClick={toggleOverlay}></i>
-            </div>
-            <form id="guestForm">
-              <div className="form-group">
-                <label htmlFor="guestNameInput">Name</label>
-                <input type="text" className="form-control" id="guestNameInput" placeholder="Enter your name" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="guestImageInput">Profile Picture</label>
-                <input type="file" className="form-control" id="guestImageInput" accept="image/*" required />
-              </div>
-              <button type="submit" className="btn btn-primary mt-3">Submit</button>
-            </form>
+        <div className="popup-form">
+          <div className="form_top">
+            <h3>Enter Guest Details</h3>
+            <i className="fa-solid fa-x fa-xl" onClick={toggleOverlay}></i>
           </div>
+          <form id="guestForm" onSubmit={toggleOverlay}>
+            <div className="form-group">
+              <label htmlFor="guestNameInput">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="guestNameInput"
+                placeholder="Enter your name"
+                value={userName}
+                onChange={handleNameChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="guestImageInput">Profile Picture</label>
+              <input
+                type="file"
+                className="form-control"
+                id="guestImageInput"
+                accept="image/*"
+                onChange={handleImageChange}
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-primary mt-3">
+              Submit
+            </button>
+          </form>
         </div>
+      </div>
       )}
     </div>
   );

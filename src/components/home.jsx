@@ -11,6 +11,17 @@ import img_2 from '../images/img_2.jpg'
 import img_3 from '../images/img_3.jpg'
 import person_1 from '../images/person_1.jpg'
 
+
+
+import livelihood from '../images/livelihood.JPG'
+import natural from '../images/natural.JPG'
+import classroom from '../images/classroom.jpg'
+import cause1 from '../images/cause1.JPG'
+import cause2 from '../images/cause2.JPG'
+import cause3 from '../images/cause3.JPG'
+import bg from '../images/bg.JPG'
+import event from '../images/event.JPG'
+
 export const Home = () => {
     return (
         <>
@@ -35,21 +46,21 @@ export const Home = () => {
             <div className="container">
                 <div className="feature-29192-wrap d-md-flex" style={{marginTop: '-20px',  position: 'relative', zIndex: '2'}}>
 
-                    <a href="#" className="feature-29192 overlay-danger" style={{backgroundImage: `url(${img_3_gray})`}}>
+                    <a href="#" className="feature-29192 overlay-danger" style={{backgroundImage: `url(${livelihood})`}}>
                         <div className="text">
                             <span className="meta">Livelihood</span>
                             <h3 className="text-cursive text-white h1">Livelihood</h3>
                         </div>
                     </a>
 
-                    <a className="feature-29192 overlay-success" style={{backgroundImage: `url(${img_2_gray})`}}>
+                    <a className="feature-29192 overlay-success" style={{backgroundImage: `url(${natural})`}}>
                         <div className="text">
                             <span className="meta">Health</span>
                             <h3 className="text-cursive text-white h1">Natural Remedies</h3>
                         </div>
                     </a>
 
-                    <div className="feature-29192 overlay-warning" style={{backgroundImage: `url(${img_1_gray})`}}>
+                    <div className="feature-29192 overlay-warning" style={{backgroundImage: `url(${classroom})`}}>
                         <div className="text">
                             <span className="meta">School</span>
                             <h3 className="text-cursive text-white h1">New Class Rooms</h3>
@@ -79,7 +90,7 @@ export const Home = () => {
                             <div className="cause shadow-sm">
 
                                 <a href="posts.html" className="cause-link d-block">
-                                    <img src={img_1} alt="Image" className="img-fluid" />
+                                    <img src={cause1} alt="Image" className="img-fluid" />
                                     <div className="custom-progress-wrap">
                                         <span className="caption">80% complete</span>
                                         <div className="custom-progress-inner">
@@ -111,7 +122,7 @@ export const Home = () => {
                             <div className="cause shadow-sm">
 
                                 <a href="#" className="cause-link d-block">
-                                    <img src={img_2} alt="Image" className="img-fluid" />
+                                    <img src={cause2} alt="Image" className="img-fluid" />
                                     <div className="custom-progress-wrap">
                                         <span className="caption">80% complete</span>
                                         <div className="custom-progress-inner">
@@ -144,7 +155,7 @@ export const Home = () => {
                             <div className="cause shadow-sm">
 
                                 <a href="#" className="cause-link d-block">
-                                    <img src={img_3} alt="Image" className="img-fluid" />
+                                    <img src={cause3} alt="Image" className="img-fluid" />
                                     <div className="custom-progress-wrap">
                                         <span className="caption">80% complete</span>
                                         <div className="custom-progress-inner">
@@ -175,7 +186,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-image overlay site-section" style={{backgroundImage: `url(${hero_1})` }}>
+            <div className="bg-image overlay site-section" style={{backgroundImage: `url(${bg})` }}>
                 <div className="container">
 
                     <div className="row align-items-center">
@@ -253,7 +264,7 @@ export const Home = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="event-29191 mb-5">
-                                <a href="#" className="d-block mb-3"><img src={img_1} alt="Image" className="img-fluid rounded" /></a>
+                                <a href="#" className="d-block mb-3"><img src={cause3} alt="Image" className="img-fluid rounded" /></a>
                                 <div className="px-3 d-flex">
 
                                     <div className="bg-primary p-3 d-inline-block text-center rounded mr-4 date">
@@ -274,7 +285,7 @@ export const Home = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="event-29191 mb-5">
-                                <a href="#" className="d-block mb-3"><img src={img_2} alt="Image" className="img-fluid rounded" /></a>
+                                <a href="#" className="d-block mb-3"><img src={event} alt="Image" className="img-fluid rounded" /></a>
                                 <div className="px-3 d-flex">
 
                                     <div className="bg-primary p-3 d-inline-block text-center rounded mr-4 date">
@@ -302,7 +313,7 @@ export const Home = () => {
                 <div className="container">
                     <div className="row align-items-stretch">
                         <div className="col-md-6">
-                            <img src={img_1} alt="Image" className="img-fluid shadow" />
+                            <img src={bg} alt="Image" className="img-fluid shadow" />
                         </div>
                         <div className="col-md-6">
                             <div className="bg-white h-100 p-4 shadow">
