@@ -3109,8 +3109,8 @@ input[type="radio"]:checked + label .card_description {
   position: relative;
   width: 810px;
   height: 575px;
-  border: 2px solid #ff2770;
-  box-shadow: 0 0 25px #ff2770;
+  border: 2px solid #696466;
+  box-shadow: 0 0 25px #5a5959;
   padding: 2rem;
   margin: 3rem auto;
   overflow: hidden;
@@ -3131,7 +3131,7 @@ input[type="radio"]:checked + label .card_description {
 .form-box .login {
   left: 0;
   padding: 0 40px;
-}
+} 
 
 .form-box.login .animation {
   transform: translateX(0%);
@@ -3192,7 +3192,7 @@ input[type="radio"]:checked + label .card_description {
 
 .input-box input:focus,
 .input-box input:valid {
-  border-bottom: 2px solid #ff2770;
+  border-bottom: 2px solid #27ff32;
 }
 
 .input-box label {
@@ -3208,7 +3208,7 @@ input[type="radio"]:checked + label .card_description {
 .input-box input:focus ~ label,
 .input-box input:valid ~ label {
   top: -5px;
-  color: #ff2770;
+  color: #27ff32;
 }
 
 .input-box i {
@@ -3222,7 +3222,7 @@ input[type="radio"]:checked + label .card_description {
 .input-box input:focus ~ i,
 .input-box input:valid ~ i {
   top: -5px;
-  color: #ff2770;
+  color: #27ff32;
 }
 
 .register-link p {
@@ -3239,7 +3239,7 @@ input[type="radio"]:checked + label .card_description {
   cursor: pointer;
   font: 16px;
   font-weight: 600;
-  border: 2px solid #ff2770;
+  border: 2px solid #21323B;
   overflow: hidden;
   z-index: 1;
   color: white;
@@ -3250,7 +3250,7 @@ input[type="radio"]:checked + label .card_description {
   position: absolute;
   height: 300%;
   width: 100%;
-  background: linear-gradient(#21323b, #ff2770, #21323b, #ff2770);
+  background: linear-gradient(#21323b, #21323B, #21323b, #ff2770);
   top: -100%;
   left: 0;
   z-index: -1;
@@ -3342,7 +3342,7 @@ input[type="radio"]:checked + label .card_description {
   top: -5px;
   height: 600px;
   width: 850px;
-  background: linear-gradient(45deg, #21323b, #ff2770);
+  background: linear-gradient(45deg, #21323b, #05A551);
   transform: rotate(10deg) skewY(40deg);
   transform-origin: bottom right;
   transition: 2.5s ease;
@@ -3360,7 +3360,7 @@ input[type="radio"]:checked + label .card_description {
   height: 700px;
   width: 850px;
   background: #21323b;
-  border-top: 3px solid #ff2770;
+  /* border-top: 3px solid #ff2770; */
   transform: rotate(0deg) skewY(0deg);
   transform-origin: bottom left;
   transition: 1.2s ease;

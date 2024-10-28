@@ -45,7 +45,7 @@ export const Login = () => {
                 {/* Info Section for Login */}
                 <div className="info-content login">
                     <h2 className="animation" style={{ '--D': 0 }}>Welcome Back!</h2>
-                    <p className="animation" style={{ '--D': 1 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusamus.</p>
+                    <p className="animation" style={{ '--D': 1 }}>Hi User, Please log in to get started...</p>
                 </div>
 
                 {/* Register Form */}
@@ -84,7 +84,7 @@ export const Login = () => {
                 {/* Info Section for Register */}
                 <div className="info-content register">
                     <h2 className="animation" style={{ '--li': 17 }}>Welcome!</h2>
-                    <p className="animation" style={{ '--li': 18 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, accusamus.</p>
+                    <p className="animation" style={{ '--li': 18 }}>Hi User, Please Create an account to get started...</p>
                 </div>
             </div>
         </>

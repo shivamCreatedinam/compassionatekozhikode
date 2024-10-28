@@ -60,10 +60,10 @@ export const Header = () => {
                   <Link to="#" className="nav-link">Our Causes</Link>
                 </li>
                 <li>
-                  <Link to="#" className="nav-link">Blog</Link>
+                  <Link to="blogs" className="nav-link">Blog</Link>
                 </li>
                 <li>
-                  <Link to="#" className="nav-link">Contact</Link>
+                  <Link to="contact" className="nav-link">Contact</Link>
                 </li>
                 <li className="user-dropdown">
                   <Link to='#' className="nav-link">
