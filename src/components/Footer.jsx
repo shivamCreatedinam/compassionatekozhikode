@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export const Footer = () => {
     return ( 
         <div>
@@ -17,11 +17,11 @@ export const Footer = () => {
                                 <div className="col-md-4 ml-auto">
                                     <h2 className="footer-heading mb-4">Features</h2>
                                     <ul className="list-unstyled">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Testimonials</a></li>
-                                        <li><a href="#">Terms of Service</a></li>
-                                        <li><a href="#">Privacy</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><Link to="/about">About Us</Link></li>
+                                        <li><Link to="/events">Event</Link></li>
+                                        <li><Link to="#">Terms of Service</Link></li>
+                                        <li><Link to="/blogs">Blog</Link></li>
+                                        <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
                                 </div>
 
