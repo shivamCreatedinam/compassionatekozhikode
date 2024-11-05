@@ -160,7 +160,7 @@ body {
 }
 .slider .box1 {
   /* background-color: #500033; */
-  background-image: url(/images/banner_1.JPG);
+  background-image: url(/src/images/banner_1.JPG);
   background-size: cover;
 
 }

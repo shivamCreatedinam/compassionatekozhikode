@@ -1,5 +1,9 @@
 import React, {useState, useEffect } from 'react'
-
+import banner1 from '../images/banner_1.JPG'
+import banner2 from '../images/banner_2.JPG'
+import banner3 from '../images/banner_3.JPG'
+import banner4 from '../images/banner_4.JPG'
+import banner5 from '../images/banner_5.JPG'
 export const Posts = () => {
 
 // for first carousel
@@ -65,66 +69,6 @@ const handleTouchEnd = () => {
 
 
 
-// second Carousel
-const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide for the second carousel
-const [autoSlideInterval, setAutoSlideInterval] = useState(null); // State to track interval for auto sliding
-const slidePositions = [0, 20, 40, 60, 80]; // Positions for the second carousel
-const autoSlideDuration = 4000; // 4 seconds for auto slide
-
-// Function to handle slide logic
-const changeSlide = (direction) => {
-    clearInterval(autoSlideInterval); // Clear the existing interval
-    let nextSlide;
-    if (direction === 'next') {
-        nextSlide = (currentSlide + 20) % 100; // Move to the next slide
-    } else {
-        nextSlide = (currentSlide - 20 + 100) % 100; // Move to the previous slide
-    }
-    setCurrentSlide(nextSlide);
-};
-
-// Effect to start the automatic slider
-useEffect(() => {
-    const interval = setInterval(() => changeSlide('next'), autoSlideDuration);
-    setAutoSlideInterval(interval);
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
-}, [currentSlide]); // Re-run when currentSlide changes
-
-// Function to handle click on Next/Previous buttons
-const onNavigateButtonClick = (direction) => {
-    changeSlide(direction);
-};
-
-// Function to handle click on trail dots
-const onTrailDotClick = (index) => {
-    clearInterval(autoSlideInterval);
-    setCurrentSlide(slidePositions[index]);
-};
-
-// Swipe detection
-let touchStartX = 0;
-let touchEndX = 0;
-
-const onTouchStart = (e) => {
-    touchStartX = e.touches[0].clientX; // Get the starting touch position
-};
-
-const onTouchMove = (e) => {
-    touchEndX = e.touches[0].clientX; // Get the current touch position
-};
-
-const onTouchEnd = () => {
-    if (touchStartX - touchEndX > 50) {
-        changeSlide('next'); // Swipe left
-    } else if (touchEndX - touchStartX > 50) {
-        changeSlide('prev'); // Swipe right
-    }
-};
-
-
-
-
 
 
     return (
@@ -140,7 +84,7 @@ const onTouchEnd = () => {
                 onTouchEnd={handleTouchEnd}
             >
                 {/* Slides */}
-                <div className="box1 box">
+                <div className="box1 box" style={{backgroundImage: `url(${banner1})`}}>
                     <div className="bg"></div>
                     <div className="details">
                         <h1>Title 1</h1>
@@ -148,7 +92,7 @@ const onTouchEnd = () => {
                         <button type="button">Check Now</button>
                     </div>
                 </div>
-                <div className="box2 box">
+                <div className="box2 box" style={{backgroundImage: `url(${banner2})`}}>
                     <div className="bg"></div>
                     <div className="details">
                         <h1>Title 2</h1>
@@ -156,7 +100,7 @@ const onTouchEnd = () => {
                         <button>Check Now</button>
                     </div>
                 </div>
-                <div className="box3 box">
+                <div className="box3 box" style={{backgroundImage: `url(${banner3})`}}>
                     <div className="bg"></div>
                     <div className="details">
                         <h1>Title 3</h1>
@@ -164,7 +108,7 @@ const onTouchEnd = () => {
                         <button>Check Now</button>
                     </div>
                 </div>
-                <div className="box4 box">
+                <div className="box4 box" style={{backgroundImage: `url(${banner4})`}}>
                     <div className="bg"></div>
                     <div className="details">
                         <h1>Title 4</h1>
@@ -172,7 +116,7 @@ const onTouchEnd = () => {
                         <button>Check Now</button>
                     </div>
                 </div>
-                <div className="box5 box">
+                <div className="box5 box" style={{backgroundImage: `url(${banner5})`}}>
                     <div className="bg"></div>
                     <div className="details">
                         <h1>Title 5</h1>
@@ -360,69 +304,7 @@ const onTouchEnd = () => {
                 </div>
             </div>
 
-            {/*  Slider for extra showcasing */}
-            <h2 className="more_events"><span></span>More relevant Programms / Events</h2>
-            <div className="slider_wrapper">
-            <div className="slider_container" style={{ transform: `translateX(-${currentSlide}%)` }}>
-                <input type="radio" name="secondSlide" id="s1" checked={currentSlide === 0} />
-                <label htmlFor="s1" className="card" onClick={() => onTrailDotClick(0)}>
-                    <div className="slider_row">
-                        <div className="icon">1</div>
-                        <div className="card_description">
-                            <h4>Card 1</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ut.</p>
-                        </div>
-                    </div>
-                </label>
-
-                <input type="radio" name="secondSlide" id="s2" checked={currentSlide === 20} />
-                <label htmlFor="s2" className="card" onClick={() => onTrailDotClick(1)}>
-                    <div className="slider_row">
-                        <div className="icon">2</div>
-                        <div className="card_description">
-                            <h4>Card 2</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ut.</p>
-                        </div>
-                    </div>
-                </label>
-
-                <input type="radio" name="secondSlide" id="s3" checked={currentSlide === 40} />
-                <label htmlFor="s3" className="card" onClick={() => onTrailDotClick(2)}>
-                    <div className="slider_row">
-                        <div className="icon">3</div>
-                        <div className="card_description">
-                            <h4>Card 3</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ut.</p>
-                        </div>
-                    </div>
-                </label>
-
-                <input type="radio" name="secondSlide" id="s4" checked={currentSlide === 60} />
-                <label htmlFor="s4" className="card" onClick={() => onTrailDotClick(3)}>
-                    <div className="slider_row">
-                        <div className="icon">4</div>
-                        <div className="card_description">
-                            <h4>Card 4</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ut.</p>
-                        </div>
-                    </div>
-                </label>
-            </div>
-
-            {/* Next and Previous buttons */}
-            {/* <button onClick={() => onNavigateButtonClick('prev')}>Previous</button>
-            <button onClick={() => onNavigateButtonClick('next')}>Next</button> */}
-
-            {/* Add touch event listeners to the slider */}
-            <div 
-                className="touch_area" 
-                onTouchStart={onTouchStart} 
-                onTouchMove={onTouchMove} 
-                onTouchEnd={onTouchEnd}
-            />
-        </div>
-
-
+    
 
 
         </>
