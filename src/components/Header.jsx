@@ -44,7 +44,6 @@ export const Header = () => {
             <div className="site-logo">
               <Link to="/" className="text-white">
                 <img src={logo} alt="" style={{ width: '100px' }} />
-                <span>Compassion atekozhikode</span>
               </Link>
             </div>
 
@@ -57,13 +56,13 @@ export const Header = () => {
                   <Link to="/about" className="nav-link">About Us</Link>
                 </li>
                 <li>
-                  <Link to="#" className="nav-link">Our Causes</Link>
+                  <Link to="/Events" className="nav-link">Event</Link>
                 </li>
                 <li>
-                  <Link to="blogs" className="nav-link">Blog</Link>
+                  <Link to="/blogs" className="nav-link">Blog</Link>
                 </li>
                 <li>
-                  <Link to="contact" className="nav-link">Contact</Link>
+                  <Link to="/contact" className="nav-link">Contact</Link>
                 </li>
                 <li className="user-dropdown">
                   <Link to='#' className="nav-link">
@@ -118,9 +117,9 @@ export const Header = () => {
             <ul className="sidebar-menu">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><Link to="#">Our Causes</Link></li>
-              <li><Link to="#">Blog</Link></li>
-              <li><Link to="#">Contact</Link></li>
+              <li><Link to="/Events">Event</Link></li>
+              <li><Link to="/blogs">Blog</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
         </div>

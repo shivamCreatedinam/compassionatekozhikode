@@ -4,6 +4,7 @@ import banner2 from '../images/banner_2.JPG'
 import banner3 from '../images/banner_3.JPG'
 import banner4 from '../images/banner_4.JPG'
 import banner5 from '../images/banner_5.JPG'
+import person_1 from '../images/img_1.jpg'
 export const Posts = () => {
 
 // for first carousel
@@ -185,7 +186,7 @@ const handleTouchEnd = () => {
                 <div className="post-right">
                     <div className="col-md-6 right_content">
                         <div className="event-29191 mb-5">
-                            <a href="#" className="d-block mb-3"><img src="images/img_1.jpg" alt="Image" className="img-fluid rounded" /></a>
+                            <a href="#" className="d-block mb-3"><img src={person_1} alt="Image" className="img-fluid rounded" /></a>
                             <div className="px-3 d-flex">
 
                                 <div className="bg-primary p-3 d-inline-block text-center rounded mr-4 date ">
@@ -222,8 +223,6 @@ const handleTouchEnd = () => {
                 </div>
             </div>
 
-
-
             {/* Amazon Products  */}
             <div className="amazon-section">
                 <h1 className="products_heading">What You can do to contribute,  <br /> cause every small support makes a big change</h1>
@@ -256,57 +255,8 @@ const handleTouchEnd = () => {
                             <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
                         </div>
                     </div>
-                    <div className="product_wrapper">
-                        <img className="product_img" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2777/posts/29421/image-upload/Branding_Mockup_Scene.jpg" alt="" />
-                        <div className="product_desc">
-                            <h3>Product 1</h3>
-                            <p>about it </p>
-                            <p>$ 0.00</p>
-                            <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
-                        </div>
-                    </div>
-                    <div className="product_wrapper">
-                        <img className="product_img" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2777/posts/29421/image-upload/Branding_Mockup_Scene.jpg" alt="" />
-                        <div className="product_desc">
-                            <h3>Product 1</h3>
-                            <p>about it </p>
-                            <p>$ 0.00</p>
-                            <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
-                        </div>
-                    </div>
-                    <div className="product_wrapper">
-                        <img className="product_img" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2777/posts/29421/image-upload/Branding_Mockup_Scene.jpg" alt="" />
-                        <div className="product_desc">
-                            <h3>Product 1</h3>
-                            <p>about it </p>
-                            <p>$ 0.00</p>
-                            <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
-                        </div>
-                    </div>
-                    <div className="product_wrapper">
-                        <img className="product_img" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2777/posts/29421/image-upload/Branding_Mockup_Scene.jpg" alt="" />
-                        <div className="product_desc">
-                            <h3>Product 1</h3>
-                            <p>about it </p>
-                            <p>$ 0.00</p>
-                            <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
-                        </div>
-                    </div>
-                    <div className="product_wrapper">
-                        <img className="product_img" src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2777/posts/29421/image-upload/Branding_Mockup_Scene.jpg" alt="" />
-                        <div className="product_desc">
-                            <h3>Product 1</h3>
-                            <p>about it </p>
-                            <p>$ 0.00</p>
-                            <button className="custom-btn btn-7 donate-btn"><span>Donate</span></button>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-    
-
-
         </>
     )
 }

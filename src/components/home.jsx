@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import bg_1 from '../images/home_1.JPG'
 import bg_2 from '../images/home_2.JPG'
 import bg_3 from '../images/home_3.JPG'
@@ -36,31 +37,31 @@ export const Home = () => {
                 </div>
 
                 <div className="owl-carousel owl-1 ">
-                    <div className="ftco-cover-1 overlay" style={{backgroundImage: `url(${bg_1})`}}></div>
-                    <div className="ftco-cover-1 overlay" style={{backgroundImage: `url(${bg_2})`}}></div>
-                    <div className="ftco-cover-1 overlay" style={{backgroundImage: `url(${bg_3})`}}></div>
+                    <div className="ftco-cover-1 overlay" style={{ backgroundImage: `url(${bg_1})` }}></div>
+                    <div className="ftco-cover-1 overlay" style={{ backgroundImage: `url(${bg_2})` }}></div>
+                    <div className="ftco-cover-1 overlay" style={{ backgroundImage: `url(${bg_3})` }}></div>
 
                 </div>
             </div>
 
             <div className="container">
-                <div className="feature-29192-wrap d-md-flex" style={{marginTop: '-20px',  position: 'relative', zIndex: '2'}}>
+                <div className="feature-29192-wrap d-md-flex" style={{ marginTop: '-20px', position: 'relative', zIndex: '2' }}>
 
-                    <a href="#" className="feature-29192 overlay-danger" style={{backgroundImage: `url(${livelihood})`}}>
+                    <a href="#" className="feature-29192 overlay-danger" style={{ backgroundImage: `url(${livelihood})` }}>
                         <div className="text">
                             <span className="meta">Livelihood</span>
                             <h3 className="text-cursive text-white h1">Livelihood</h3>
                         </div>
                     </a>
 
-                    <a className="feature-29192 overlay-success" style={{backgroundImage: `url(${natural})`}}>
+                    <a className="feature-29192 overlay-success" style={{ backgroundImage: `url(${natural})` }}>
                         <div className="text">
                             <span className="meta">Health</span>
                             <h3 className="text-cursive text-white h1">Natural Remedies</h3>
                         </div>
                     </a>
 
-                    <div className="feature-29192 overlay-warning" style={{backgroundImage: `url(${classroom})`}}>
+                    <div className="feature-29192 overlay-warning" style={{ backgroundImage: `url(${classroom})` }}>
                         <div className="text">
                             <span className="meta">School</span>
                             <h3 className="text-cursive text-white h1">New Class Rooms</h3>
@@ -88,17 +89,17 @@ export const Home = () => {
                     <div className="row">
                         <div className="col-md-4">
                             <div className="cause shadow-sm">
-
-                                <a href="posts.html" className="cause-link d-block">
-                                    <img src={cause1} alt="Image" className="img-fluid" />
-                                    <div className="custom-progress-wrap">
-                                        <span className="caption">80% complete</span>
-                                        <div className="custom-progress-inner">
-                                            <div className="custom-progress bg-danger" style={{width:'80%'}}></div>
+                                <Link to="/Posts" className="nav-link">
+                                    <a href="posts.html" className="cause-link d-block">
+                                        <img src={cause1} alt="Image" className="img-fluid" />
+                                        <div className="custom-progress-wrap">
+                                            <span className="caption">80% complete</span>
+                                            <div className="custom-progress-inner">
+                                                <div className="custom-progress bg-danger" style={{ width: '80%' }}></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-
+                                    </a>
+                                </Link>
                                 <div className="px-3 pt-3 border-top-0 border border shadow-sm">
                                     <span className="badge-danger py-1 small px-2 rounded mb-3 d-inline-block">School</span>
                                     <h3 className="mb-4"><a href="#">Alias Odit Ipsam Quas Unde Obcaecati</a></h3>
@@ -106,15 +107,15 @@ export const Home = () => {
                                         <div>Donated</div>
                                         <div className="ml-auto"><strong className="text-primary">₹32,919</strong></div>
                                     </div>
-
-                                    <div className="py-4">
-                                        <div className="d-flex align-items-center">
-                                            <img src={person_1} alt="Image" className="rounded-circle mr-3" width="50" />
-                                            <div className="">Rahul Yadav <br /> Delhi, India</div>
+                                    <Link to="/Posts" className="nav-link">
+                                        <div className="py-4">
+                                            <div className="d-flex align-items-center">
+                                                <img src={person_1} alt="Image" className="rounded-circle mr-3" width="50" />
+                                                <div className="">Child Care Institution <br /> Meerut, India</div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
-
                             </div>
                         </div>
                         <div className="col-md-4">
@@ -126,7 +127,7 @@ export const Home = () => {
                                     <div className="custom-progress-wrap">
                                         <span className="caption">80% complete</span>
                                         <div className="custom-progress-inner">
-                                            <div className="custom-progress bg-primary" style={{width:'80%'}}></div>
+                                            <div className="custom-progress bg-primary" style={{ width: '80%' }}></div>
                                         </div>
                                     </div>
                                 </a>
@@ -159,7 +160,7 @@ export const Home = () => {
                                     <div className="custom-progress-wrap">
                                         <span className="caption">80% complete</span>
                                         <div className="custom-progress-inner">
-                                            <div className="custom-progress bg-warning" style={{width:'80%'}}></div>
+                                            <div className="custom-progress bg-warning" style={{ width: '80%' }}></div>
                                         </div>
                                     </div>
                                 </a>
@@ -186,7 +187,7 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-image overlay site-section" style={{backgroundImage: `url(${bg})` }}>
+            <div className="bg-image overlay site-section" style={{ backgroundImage: `url(${bg})` }}>
                 <div className="container">
 
                     <div className="row align-items-center">
@@ -309,7 +310,7 @@ export const Home = () => {
             </div>
 
 
-            <div className="site-section bg-image overlay-primary" style={{backgroundImage: `url(${img_1})`}}>
+            <div className="site-section bg-image overlay-primary" style={{ backgroundImage: `url(${img_1})` }}>
                 <div className="container">
                     <div className="row align-items-stretch">
                         <div className="col-md-6">
