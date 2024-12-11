@@ -10,16 +10,14 @@ export const Footer = () => {
                             <div className="row">
                                 <div className="col-md-7">
                                     <h2 className="footer-heading mb-4">About Us</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem modi, quaerat laborum id fugit blanditiis
-                                        ratione delectus assumenda.</p>
+                                    <p>The Human Touch is a compassionate organization dedicated to transforming the lives of children in observation homes. With a mission to provide care, protection, and empowerment, we work tirelessly to ensure that every child has the opportunity to grow, thrive, and envision a brighter future.</p>
 
                                 </div>
                                 <div className="col-md-4 ml-auto">
                                     <h2 className="footer-heading mb-4">Features</h2>
                                     <ul className="list-unstyled">
                                         <li><Link to="/about">About Us</Link></li>
-                                        <li><Link to="/events">Event</Link></li>
-                                        <li><Link to="#">Terms of Service</Link></li>
+                                        <li><Link to="/eventlist">Event</Link></li>
                                         <li><Link to="/blogs">Blog</Link></li>
                                         <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
@@ -56,8 +54,7 @@ export const Footer = () => {
                             <div className="pt-5">
                                 <p>
                                     Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | <i
-                                        className="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | 💖 by <a href="https://createdinam.com"
                                             target="_blank">Createdinam</a>
                                 </p>
                             </div>

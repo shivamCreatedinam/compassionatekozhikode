@@ -9,6 +9,9 @@ import { Test } from "./components/test";
 import { Contact } from "./components/Contact";
 import { Events } from "./components/Events";
 import { Blog } from "./components/Blog";
+import { NGOList } from "./components/NgoList";
+import { NgoDetailsPage } from "./components/NgoDetailsPage";
+import { EventList } from "./components/EventList";
 
 function App() {
   return (
@@ -18,10 +21,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/ngo_list" element={<NGOList />} />
+          <Route path="/ngodetails" element={<NgoDetailsPage />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/eventlist" element={<EventList />} />
           <Route path="/blogs" element={<Blog />} />
         </Routes>
         <Footer />
