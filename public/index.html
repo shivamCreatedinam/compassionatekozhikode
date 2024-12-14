@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="%PUBLIC_URL%/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta name="description" content="Web site created using create-react-app" />
   <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
   <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=Merriweather:wght@900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap/bootstrap-grid.css">
   <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap/bootstrap-reboot.css">
@@ -29,14 +31,12 @@
   <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css">
   <link rel="stylesheet" href="%PUBLIC_URL%/css/style2.css">
 
-
   <!-- MAIN CSS -->
   <!-- <link rel="stylesheet" href="../src/css/style.css"> -->
   <!-- icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -67,6 +67,25 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+  <script type="application/json" id="jsonData">
+      {
+          "projects": [
+              {
+                  "name": "Свободно",
+                  "progress": 0
+              },
+              {
+                  "name": "Свободно",
+                  "progress": 50
+              },
+              {
+                  "name": "Свободно",
+                  "progress": 100
+              }
+          ]
+      }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="%PUBLIC_URL%/js/jquery-3.3.1.min.js"></script>
   <script src="%PUBLIC_URL%/js/popper.min.js"></script>

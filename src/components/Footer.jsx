@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 export const Footer = () => {
+
+
+    const subscribe = () => {
+        alert('Subscribe for Updates')
+    }
+
     return ( 
         <div>
             <footer className="site-footer bg-white">
@@ -29,7 +35,7 @@ export const Footer = () => {
 
                             <div className="mb-5">
                                 <h2 className="footer-heading mb-4">Subscribe to Newsletter</h2>
-                                <form action="#" method="post" className="footer-suscribe-form">
+                                <form className="footer-suscribe-form">
                                     <div className="input-group mb-3">
                                         <input type="text" className="form-control rounded-0 border-secondary text-white bg-transparent"
                                             placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2" />
@@ -53,8 +59,7 @@ export const Footer = () => {
                         <div className="col-md-12">
                             <div className="pt-5">
                                 <p>
-                                    Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> All rights reserved | 💖 by <a href="https://createdinam.com"
+                                    Copyright &copy; 2024 All rights reserved | 💖 by <a href="https://createdinam.com"
                                             target="_blank">Createdinam</a>
                                 </p>
                             </div>

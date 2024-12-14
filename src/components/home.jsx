@@ -10,9 +10,13 @@ import natural from '../images/natural.JPG'
 import classroom from '../images/classroom.jpg'
 import bg from '../images/bg.JPG'
 
-import bg_1 from '../images/home_1.JPG'
-import bg_2 from '../images/home_2.JPG'
-import bg_3 from '../images/home_3.JPG'
+import bg_1 from '../images/banner_one.jpg'
+import bg_2 from '../images/banner_two.jpg'
+import bg_3 from '../images/banner_three.jpg'
+import bg_4 from '../images/banner_four.jpg'
+import bg_5 from '../images/banner_five.jpg'
+import bg_6 from '../images/banner_six.jpg'
+import bg_7 from '../images/banner_seven.jpg'
 
 // import ReactFullscreenSlideshow from "react-fullscreen-slideshow";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,9 +31,12 @@ import "swiper/css/scrollbar";
 
 const SLIDES = [
     { src: bg_1, alt: 'Image 1', title: 'Join The Movement To end Child Poverty', button_name: 'Donate', link: 'donate' },
-    { src: bg_3, alt: 'Image 2', title: 'From Hunger to Hope – Together, We Fight', button_name: 'Donate', link: 'donate' },
     { src: bg_2, alt: 'Image 3', title: 'Empowering Communities, Inspiring Hope', button_name: 'Donate', link: 'donate' },
     { src: bg_3, alt: 'Image 4', title: 'Transforming Lives, One Step at a Time', button_name: 'Donate', link: 'donate' },
+    { src: bg_4, alt: 'Image 2', title: 'From Hunger to Hope – Together, We Fight', button_name: 'Donate', link: 'donate' },
+    { src: bg_5, alt: 'Image 2', title: 'From Hunger to Hope – Together, We Fight', button_name: 'Donate', link: 'donate' },
+    { src: bg_6, alt: 'Image 2', title: 'From Hunger to Hope – Together, We Fight', button_name: 'Donate', link: 'donate' },
+    { src: bg_7, alt: 'Image 2', title: 'From Hunger to Hope – Together, We Fight', button_name: 'Donate', link: 'donate' },
 ];
 
 export const Home = () => {
@@ -162,6 +169,15 @@ export const Home = () => {
         alert('Your Donation Request Submit Successfully!')
     }
 
+    // Function to calculate percentage
+    const calculatePercentage = (achieved, target) => {
+        if (target === 0) {
+            return 0; // Avoid division by zero
+        }
+        const percentage = (achieved / target) * 100;
+        return percentage.toFixed(0); // Returns percentage up to 2 decimal places
+    };
+
 
     return (
         <>
@@ -170,10 +186,6 @@ export const Home = () => {
                     {SLIDES.map((slide, index) => (
                         <div className='content-image' key={index}>
                             <img width={1920} height={850} src={slide.src} alt="Image Slider" />
-                            <div className="box-92819">
-                                <h1 className="text-white mb-3">{slide.title}</h1>
-                                {/* <p><a href="#" className="btn btn-primary py-3 px-4 rounded-0">{slide.button_name}</a></p> */}
-                            </div>
                         </div>
                     ))}
                 </Slider>
@@ -242,9 +254,9 @@ export const Home = () => {
                                             <img key={index} src={'https://ngo.createdinam.com/public/' + image} alt="Image" className="img-fluid" />
                                         ))}
                                         <div className="custom-progress-wrap">
-                                            <span className="caption">80% complete</span>
+                                            <span className="caption">{calculatePercentage(Number(info?.donation_qty_received), Number(info?.donation_qty))}% complete</span>
                                             <div className="custom-progress-inner">
-                                                <div className="custom-progress bg-danger" style={{ width: '80%' }}></div>
+                                                <div className="custom-progress bg-success" style={{ width: calculatePercentage(Number(info?.donation_qty_received), Number(info?.donation_qty)) + '%' }}></div>
                                             </div>
                                         </div>
                                     </Link>
@@ -257,10 +269,8 @@ export const Home = () => {
                                             {info?.post_desc.slice(0, 160)}...
                                         </p>
                                         <div className="border-top border-light border-bottom py-2 d-flex">
-                                            <div>Donated</div>
-                                            <div className="ml-auto"><strong className="text-primary">{info?.donation_amount}</strong></div>
                                         </div>
-                                        <Link to={`/ngodetails?query=${info?.ngo?.id}`} className="nav-link">
+                                        <Link to={`/Posts?query=${info?.id}`} className="nav-link">
                                             <div className="py-4">
                                                 <div className="d-flex align-items-center">
                                                     <img src={'https://ngo.createdinam.com/public/' + info?.ngo?.logo} alt="Image" className="rounded-circle mr-3" width="50" />
@@ -374,7 +384,7 @@ export const Home = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="bg-white h-100 p-4 shadow">
-                                <h3 className="mb-4 text-cursive">Donate Now</h3>
+                                <h3 className="mb-4 text-cursive">Volunteer Now</h3>
                                 <form onSubmit={handleRegisterSubmit} >
                                     <div className="form-group">
                                         <input type="text" className="form-control" placeholder="Name" required />
@@ -386,7 +396,7 @@ export const Home = () => {
                                         <input type="text" className="form-control" placeholder="Amount in Rupees" required />
                                     </div>
                                     <div className="form-group">
-                                        <input type="submit" value="Donate Now" className="btn btn-primary" />
+                                        <input type="submit" value="Submit" className="btn btn-primary" />
                                     </div>
                                 </form>
                             </div>

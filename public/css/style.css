@@ -2579,8 +2579,9 @@ h5,
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: #fff;
-  font-size: 12px;
+  color: #052209;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .feature-29012 .number {
@@ -4548,7 +4549,6 @@ textarea:focus {
 
   .story_right h4 {
     line-height: 1.9rem;
-
   }
 
   .trending_story {
@@ -4556,7 +4556,6 @@ textarea:focus {
     padding: 2rem 1rem;
 
   }
-
 
 }
 
@@ -4583,14 +4582,70 @@ textarea:focus {
   height: 600px;
 }
 
-/* .slick-slide {
-  height:700px !important;
+.card-container {
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  padding: 50px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: -40px -40px #d1d0f5;
 }
 
-.slick-slide img {
-  height:700px !important;
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-size: 26px;
+  color: #1b1a34;
+  margin: 0 0 40px 0;
 }
 
-.slick-slide .carousel_img {
-  height:700px !important;
-} */
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.progress-circle {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #1b1a34;
+  border: 6px solid #d5d4f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3d3d5c;
+}
+
+.progress-text {
+  margin-left: 15px;
+}
+
+.progress-text h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1b1a34;
+}
+
+.progress-text p {
+  font-size: 14px;
+  color: #1b1a34;
+}
+
+@media (max-width: 390px) {
+  .progress {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+progress#progress-bar-1 {
+  width: 100%;
+}

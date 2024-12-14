@@ -110,8 +110,16 @@ export const NgoDetailsPage = () => {
     }, []);
 
     const showInMapClicked = () => {
-        window.open("https://maps.google.com?q=lat,long");
-    };
+        if (data[0]?.id === 9) {
+            window.open("https://maps.google.com/?q=28.884405,77.695580");
+        } else if (data[0]?.id === 10) {
+            window.open("https://maps.google.com/?q=28.996374,77.710678");
+        } else if (data[0]?.id === 11) {
+            window.open("https://maps.google.com/?q=28.974768,77.717506");
+        } else if (data[0]?.id === 12) {
+            window.open("https://maps.google.com/?q=28.974649,77.738754");
+        };
+    }
 
     return (
         <>{loading === true ? <p>loading...</p> :
@@ -120,10 +128,6 @@ export const NgoDetailsPage = () => {
                     {BannerData.map((slide, index) => (
                         <div key={index} className='content-image'>
                             <img src={'https://ngo.createdinam.com/public/' + slide} alt={slide.alt} width={1920} height={850} />
-                            <div className="box-92819">
-                                <h1 className="text-white mb-3">Because Every Child Deserves a Future</h1>
-                                <p><a href="#" className="btn btn-primary py-3 px-4 rounded-0">Your Compassion, Their Opportunity</a></p>
-                            </div>
                         </div>
                     ))}
                 </Slider>

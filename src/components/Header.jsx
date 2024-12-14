@@ -94,7 +94,7 @@ export const Header = () => {
                     activeClassName="active"
                     style={{ padding: '10px', textDecoration: 'none' }}
                   >
-                    Observation Home
+                    Institutions
                   </NavLink>
                 </li>
                 <li>
@@ -115,16 +115,6 @@ export const Header = () => {
                     style={{ padding: '10px', textDecoration: 'none' }}
                   >
                     Blog
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    exact
-                    to="/about"
-                    activeClassName="active"
-                    style={{ padding: '10px', textDecoration: 'none' }}
-                  >
-                    About Us
                   </NavLink>
                 </li>
                 <li>
@@ -152,10 +142,9 @@ export const Header = () => {
                       <p onClick={logoutUser}>Logout</p>
                     </div> :
                     <div className="dropdown">
-                      <p onClick={toggleOverlay}>Surf as a Guest</p>
-                      <Link to="/login">Sign Up / Log In</Link>
-                      {isUser === true ? <span>{JSON.stringify(isUserData)}</span> : null}
-                    </div>}
+                      <p><Link to="/login">Sign Up / Log In</Link></p>
+                    </div>
+                  }
                 </li>
               </ul>
             </nav>

@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -119,10 +116,6 @@ export const Blog = () => {
                     {SLIDES.map((slide, index) => (
                         <div key={index} className='content-image'>
                             <img width={1920} height={850} src={slide.src} alt="Image Slider" />
-                            <div className="box-92819">
-                                <h1 className="text-white mb-3">{slide.title}</h1>
-                                {/* <p><a href="#" className="btn btn-primary py-3 px-4 rounded-0">{slide.button_name}</a></p> */}
-                            </div>
                         </div>
                     ))}
                 </Slider>

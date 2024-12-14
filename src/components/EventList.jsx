@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import banner from '../images/banner_1.JPG'
+import banner from '../images/event_banner.jpg'
 import banner_2 from '../images/banner_1.JPG'
 import person from '../images/person_1.jpg'
 import organizer from '../images/classroom.jpg'
@@ -64,7 +64,7 @@ export const EventList = () => {
     return (
         <div>
             {/* hero */}
-            <div className="event_hero" style={{ backgroundImage: `url(${banner})` }}>
+            <div className="event_hero" style={{ backgroundImage: `url(${banner})`,height:900,resize:'block' }}>
             </div>
             <div className="site-section">
                 <div className="container">
@@ -98,7 +98,7 @@ export const EventList = () => {
                 </div>
             </div>
             {/* stats */}
-            <div class="bg-section" style={{ backgroundImage: `url(${banner_2})` }}>
+            {/* <div class="bg-section" style={{ backgroundImage: `url(${banner_2})` }}>
                 <div class="bg-overlay"></div>
                 <div class="event_content">
                     <div class="stat-item">
@@ -120,12 +120,11 @@ export const EventList = () => {
                         <i class="fa-solid fa-ticket"></i>
                         <div class="numbers">4,560</div>
                         <p className='last_one'>Tickets Sold by our Organization</p>
-                    </div>  {/* */}
+                    </div>
                 </div>
-            </div>
+            </div> */}
             <div className="about_organizer">
-                <div className='organizer_left'>
-                    <img src={organizer} alt="" />
+                <div className='organizer_left'> <img src={organizer} alt=""  style={{height:525}}/>
                 </div>
                 <div className='organizer_right'>
                     <h2>About Event organizer</h2>
