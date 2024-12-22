@@ -224,7 +224,7 @@ export const Home = () => {
                             <h3 className="text-cursive text-white h1">Natural Remedies</h3>
                         </div>
                     </a>
-                    <div className="feature-29192 overlay-warning" style={{ backgroundImage: `url(${classroom})` }}>
+                    <div className="feature-29192 overlay-warning" style={{ backgroundImage: `url(${img_1})` }}>
                         <div className="text">
                             <span className="meta">School</span>
                             <h3 className="text-cursive text-white h1">New Class Rooms</h3>
@@ -263,7 +263,7 @@ export const Home = () => {
                                     <div className="px-3 pt-3 border-top-0 border border shadow-sm">
                                         <span className="badge-danger py-1 small px-2 rounded mb-3 d-inline-block">#{Math.floor(Math.random() * 100) + 1990278}</span>
                                         <h3 className="mb-4">
-                                            {info?.post_title}
+                                            {info?.post_title.slice(0, 70)}...
                                         </h3>
                                         <p className="mb-4">
                                             {info?.post_desc.slice(0, 160)}...
@@ -274,7 +274,7 @@ export const Home = () => {
                                             <div className="py-4">
                                                 <div className="d-flex align-items-center">
                                                     <img src={'https://ngo.createdinam.com/public/' + info?.ngo?.logo} alt="Image" className="rounded-circle mr-3" width="50" />
-                                                    <div className="">{info?.ngo?.ngo_name} <br /> {info?.ngo?.address}</div>
+                                                    <div className="">{info?.ngo?.ngo_name} <br /> {info?.ngo?.ngo_reg_no}</div>
                                                 </div>
                                             </div>
                                         </Link>

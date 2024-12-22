@@ -59,8 +59,8 @@ export const Footer = () => {
                         <div className="col-md-12">
                             <div className="pt-5">
                                 <p>
-                                    Copyright &copy; 2024 All rights reserved | 💖 by <a href="https://createdinam.com"
-                                            target="_blank">Createdinam</a>
+                                    Copyright &copy; 2024 All rights reserved | 💖 by <a href="https://vseoarena.com/"
+                                            target="_blank">vseoarena</a>
                                 </p>
                             </div>
                         </div>
